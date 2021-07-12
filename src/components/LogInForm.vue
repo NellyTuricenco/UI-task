@@ -73,19 +73,14 @@ input {
   @media (min-width: 1024px) {
     width: 20rem;
     height: 2.5rem;
-    &:hover {
-      background-color: darken($light-color, 30%);
-    }
-    &:focus {
-      outline: none;
-      border: 3px solid #3b8ada;
-      height: 2.8rem;
-    }
+    // &:hover {
+    //   background-color: darken($light-color, 30%);
+    // }
   }
   &:focus {
     outline: none;
-    border: 2px solid #3b8ada;
-    height: 2.2rem;
+    //   border: 2px solid #3b8ada;
+    //   height: 2.2rem;
   }
 }
 .error {

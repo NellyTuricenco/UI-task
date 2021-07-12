@@ -264,19 +264,22 @@ export default {};
 }
 
 .text__wrapper {
-  padding-top: 1.5rem;
+  width: 100%;
+  padding: 1.5rem 0.5rem 0 0.5rem;
   margin: 0 auto;
   @include d-flex(center, center);
   position: relative;
   color: $light-color;
   font-size: $fs-small;
   font-weight: $fw-bold;
-  @media (min-width: 1024px) {
-    border-bottom: 3px solid $light-color;
+  @media (min-width: 768px) {
     margin: 0 auto;
     font-size: $fs-big;
-    padding-bottom: 0.5rem;
     max-width: 800px;
+  }
+  @media (min-width: 1024px) {
+    border-bottom: 3px solid $light-color;
+    padding-bottom: 0.5rem;
   }
   & span {
     padding-top: 0.2rem;
@@ -286,11 +289,14 @@ export default {};
     width: 10rem;
     border-radius: 25px;
     text-align: center;
-    @media (min-width: 1024px) {
+    @media (min-width: 768px) {
       margin-right: 1rem;
-      width: 35rem;
+      width: 18rem;
       font-size: $fs-big;
       height: 2.5rem;
+    }
+    @media (min-width: 1024px) {
+      width: 35rem;
     }
     &.left {
       margin-right: -2rem;
@@ -303,7 +309,7 @@ export default {};
     }
   }
   &.image__wrapper {
-    @media (min-width: 1024px) {
+    @media (min-width: 768px) {
       position: absolute;
       pointer-events: none;
       border-radius: 50%;
@@ -324,6 +330,7 @@ export default {};
 }
 
 .input-with-icon {
+  width: 100%;
   margin-top: 1rem;
   padding-bottom: 2rem;
   @include d-flex(center, center);
@@ -332,20 +339,22 @@ export default {};
     border: none;
     padding-bottom: 0;
     max-width: 800px;
+    width: 100%;
+    @include d-flex(space-between, center);
     margin: 1rem auto;
   }
   & input {
     position: relative;
     padding: 0 1.2rem;
     height: 30px;
-    width: 15rem;
+    width: auto;
     border-radius: 25px;
     font-size: $fs-small;
     border: none;
     background: url(images/search.png) no-repeat scroll 5px;
     background-color: $light-color;
-
-    @media (min-width: 1024px) {
+    resize: horizontal;
+    @media (min-width: 768px) {
       height: 2.5rem;
       width: 35rem;
       padding: 0 2rem;
@@ -433,6 +442,7 @@ export default {};
   }
   & span {
     @media (min-width: 1024px) {
+      line-height: 25px;
       height: 25px;
       border-right: 1px solid $grey-color;
       &.name {
